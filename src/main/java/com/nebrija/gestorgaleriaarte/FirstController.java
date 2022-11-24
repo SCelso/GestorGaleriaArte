@@ -16,7 +16,6 @@ public class FirstController implements Initializable {
     @FXML
     private Button btnVerGaleria;
 
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)  {
         btnIniciarSesion.setOnAction(actionEvent -> {

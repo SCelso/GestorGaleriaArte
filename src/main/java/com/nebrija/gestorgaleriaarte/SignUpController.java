@@ -11,16 +11,16 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class LoginController implements Initializable {
+public class SignUpController implements Initializable {
 
     @FXML
-    private Button btnAcceder;
-
-    @FXML
-    private Button btnVolver;
+    private Button btnRegistrarse;
 
     @FXML
     private Label lblErrors;
+
+    @FXML
+    private Label lblLogin;
 
     @FXML
     private TextField txtEmail;
@@ -29,24 +29,18 @@ public class LoginController implements Initializable {
     private PasswordField txtPassword;
 
     @FXML
-    private Label lblSignUp;
-
+    private PasswordField txtPassword1;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        lblSignUp.setOnMouseClicked(actionEvent -> {
+
+        lblLogin.setOnMouseClicked(mouseEvent -> {
             try {
-                App.setRoot("signUpScreen");
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        });
-        btnVolver.setOnAction(actionEvent -> {
-            try {
-                App.setRoot("firstScreen");
+                App.setRoot("loginScreen");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         });
     }
 }
+
